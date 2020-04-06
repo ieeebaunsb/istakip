@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="IsTakip.Views.Listele">
+    <ContentPage.Content>
+        <StackLayout Padding="0,25,0,0">
+            <StackLayout Orientation="Horizontal">
+
+                <Label Text="Fatura Kesim Tarihi Seçiniz:" VerticalTextAlignment="Center" TextColor="Black" FontSize="Default"></Label>
+                <DatePicker x:Name="kesimTarihi"  HorizontalOptions="FillAndExpand"></DatePicker>
+            </StackLayout>
+            <ListView x:Name="isler" ItemTapped="isler_ItemTapped"   HasUnevenRows="True" SeparatorVisibility="Default" SeparatorColor="Black">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell >
+                            <StackLayout >
+                                <Label Text="{Binding Tarih}" TextColor="Gray" HorizontalOptions="Start"/>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="{Binding YuklemeId}" TextColor="DarkRed" />
+                                    <Label Text="{Binding TeslimId}" TextColor="ForestGreen" HorizontalOptions="EndAndExpand"/>
+                                </StackLayout>
+                              
+                                <StackLayout.GestureRecognizers>
+                                    <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="TapGestureRecognizer_Tapped"/>
+                                    <TapGestureRecognizer NumberOfTapsRequired="2" Tapped="TapGestureRecognizer_Tapped_1"/>
+                                </StackLayout.GestureRecognizers>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+           
+
+            <Button x:Name="tumunuGor" Text="Tümünü Gör" Clicked="tumunuGor_Clicked"></Button>
+            <StackLayout Orientation="Horizontal">
+                <Button x:Name="hesapla" Text="Hesabı Gör" Clicked="hesapla_Clicked"></Button>
+                <Button x:Name="yenile" Text="Yenile" HorizontalOptions="FillAndExpand" Clicked="yenile_Clicked"></Button>
+
+            </StackLayout>
+        </StackLayout>
+        
+    </ContentPage.Content>
+</ContentPage>

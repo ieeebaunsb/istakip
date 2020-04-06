@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:local ="clr-namespace:IsTakip.Views"
+             x:Class="IsTakip.Views.Baslangic">
+  <!--Pages can be added as references or inline-->
+        <local:Kaydet Title="İş Kaydet"></local:Kaydet>
+    <local:Listele Title="İşleri Gör"></local:Listele>
+
+</TabbedPage>

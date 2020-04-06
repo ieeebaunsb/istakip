@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="IsTakip.Views.Kaydet">
+    <ContentPage.Content>
+        <StackLayout Padding="0,25,0,0">
+            <DatePicker x:Name="tarih" ></DatePicker> 
+            
+            <Picker x:Name="yukleme" Title="Yükleme Yeri"  >
+                <Picker.Items>
+                    
+                </Picker.Items>
+            </Picker>
+            <Picker x:Name="teslim" Title="Teslim Yeri"  >
+                <Picker.Items>
+                    
+                   
+                </Picker.Items>
+            </Picker>
+            <Entry x:Name="tonaj" Placeholder="Tonajınızı Girin" Keyboard="Numeric"/>
+            <Picker x:Name="firma" Title="Firma"  >
+                <Picker.Items>
+                   
+                </Picker.Items>
+            </Picker>
+            <Entry x:Name="mazot" Placeholder="Aldığınız Mazot Ücretini Giriniz" Keyboard="Numeric"/>
+            <Entry x:Name="avans" Placeholder="Aldığınız Avans Ücretini Giriniz" Keyboard="Numeric"/>
+            <Picker x:Name="arac" Title="Araç Seçimi"  >
+                <Picker.Items>
+                    <x:String>41 R 2285</x:String>
+                </Picker.Items>
+            </Picker>
+
+            <Button Text="Kaydet" Clicked="Button_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
